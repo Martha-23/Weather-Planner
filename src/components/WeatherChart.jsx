@@ -101,10 +101,10 @@ export default function WeatherChart({ forecastData }) {
         type: 'linear',
         display: true,
         position: 'left',
-        min: 15,
-        max: 30,
+        min: -30,
+        max: 50,
         ticks: {
-          stepSize: 5,
+          stepSize: 10,
           color: '#4a90e2',
           font: { size: 12, weight: 'bold' }
         },
