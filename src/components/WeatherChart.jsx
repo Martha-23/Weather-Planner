@@ -41,8 +41,6 @@ export default function WeatherChart({ forecastData }) {
 
   // Extract temperature values
   const avgTemps = forecastData.map(day => day.avgTemp);
-  const maxTemps = forecastData.map(day => day.maxTemp);
-  const minTemps = forecastData.map(day => day.minTemp);
 
   const data = {
     labels,

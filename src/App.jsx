@@ -18,7 +18,6 @@ export default function App() {
   const [insights, setInsights] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  const [searchedCity, setSearchedCity] = useState('');
 
   const handleSearch = async (city) => {
     setIsLoading(true);
@@ -42,8 +41,6 @@ export default function App() {
       // Generate insights
       const { insights: generatedInsights } = generateInsights(forecast, current);
       setInsights(generatedInsights);
-      
-      setSearchedCity(city);
     } catch (err) {
       setError(err.message || 'Failed to fetch weather data. Please try again.');
       console.error('Error:', err);
